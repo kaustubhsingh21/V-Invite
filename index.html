@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine? 💖</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background-color: #ffe6f2;
+            padding: 50px;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            display: inline-block;
+            max-width: 400px;
+        }
+        .hidden {
+            display: none;
+        }
+        button {
+            margin: 10px;
+            padding: 12px;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+        .yes {
+            background-color: #ff4d88;
+            color: white;
+            transition: 0.3s;
+        }
+        .yes:hover {
+            background-color: #ff1a66;
+        }
+        .no {
+            background-color: #ccc;
+            color: white;
+            transition: 0.3s;
+        }
+        .no:hover {
+            background-color: #999;
+        }
+        img {
+            width: 100px;
+            margin-bottom: 10px;
+        }
+        #details {
+            margin-top: 20px;
+            padding: 15px;
+            background: #ffe6f2;
+            border-radius: 10px;
+        }
+        .venue-img {
+            width: 100%;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+        .clock-img {
+            width: 50px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://i.imgur.com/IXeR36E.png" alt="Heart">
+        <h2>Will you be my Valentine? 💖</h2>
+        <button class="yes" onclick="showDetails()">Yes</button>
+        <button class="no" onclick="wrongChoice()">No</button>
+        <p id="response" class="hidden"></p>
+        <div id="details" class="hidden">
+            <h3>Venue: 222 Backyard 🌸</h3>
+            <img src="https://b.zmtcdn.com/data/pictures/2/18818672/7b5a1a0b0a0b0a0b0a0b0a0b0a0b0a0b.jpg" alt="222 Backyard" class="venue-img">
+            <h3>Timing: 11 AM <img src="https://i.imgur.com/clock.png" alt="Heart-shaped clock" class="clock-img"></h3>
+            <p>Can't wait to see you! 💕</p>
+        </div>
+    </div>
+    
+    <script>
+        function showDetails() {
+            document.getElementById('details').classList.remove('hidden');
+        }
+        function wrongChoice() {
+            document.getElementById('response').textContent = "Sorry, wrong choice 💔";
+            document.getElementById('response').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
